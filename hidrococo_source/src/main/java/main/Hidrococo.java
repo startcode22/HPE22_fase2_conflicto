@@ -26,7 +26,6 @@ public class Hidrococo {
 		try {
 			procesarArgumentos(args);
 		} catch (Exception e) {
-			//System.out.println(e.getMessage());
 			e.printStackTrace();
 		} finally {
 			desconectar();
