@@ -4,12 +4,19 @@ services:
     build: ./mysql
     ports:
         - 3306:3306
+    network_mode: "host"
+    #networks:
+    #  - net
   hidrococo:
     build: ./hidrococo
     depends_on:
       - mysql
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    
-
+    network_mode: "host"
+    #networks:
+    #  - net
+#networks:
+#  net:
+#    driver: bridge
 
