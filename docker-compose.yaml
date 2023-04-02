@@ -1,0 +1,15 @@
+version: '4.17'
+services:
+  mysql:
+    build: ./mysql
+    ports:
+        - 3306:3306
+  hidrococo:
+    build: ./hidrococo
+    depends_on:
+      - mysql
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    
+
+
